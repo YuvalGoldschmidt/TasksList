@@ -20,7 +20,7 @@ section#body-section{
 }
 
 p#heading-text{
-	margin: 20px;
+	margin: 20px 5%;
 	font-size: 22px;
 	font-weight: 600;
 	color: white;
@@ -132,4 +132,63 @@ button#add-button{
 
 button#add-button:focus{
 	outline: none;
+}
+
+/*Phone mode*/
+@media screen and (max-width: 1081px){
+	p#heading-text{
+		margin-top: 35px;
+		margin-bottom: 35px;
+		font-size: 40px;
+	}
+
+	input#search{
+		height: 60px;
+		border-radius: 15px;
+		font-size: 24px;
+	}
+
+	div.task{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	div.task:hover{
+		background-color: transparent;
+	}
+
+	div.task i{
+		margin-top: -17px;
+		font-size: 34px;
+	}
+
+	input.task-name{
+		font-size: 30px;
+		margin-left: 50px;
+	}
+	
+	div.task:hover input.task-name{
+		color: white;
+	}
+
+	i.task-remove{
+		display: inline-block;
+	}
+
+	div#footer{
+		height: 90px;
+	}
+
+	button#add-button{
+		height: 50px;
+		margin-top: -25px;
+		font-size: 24px;
+	}
+}
+
+/*Portrait mode*/
+@media screen and (orientation: portrait){
+	section#body-section{
+		min-width: 85vw;
+	}
 }
