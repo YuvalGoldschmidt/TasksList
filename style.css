@@ -10,12 +10,12 @@ body{
 /*Tasks Section Settings*/
 section#body-section{
 	position: absolute;
-	height: 80vh;
 	min-width: 30vw;
 	top: 10vh;
 	left: 50%;
 	transform: translateX(-50%);
-	box-shadow: 0 2px 6px 0 hsla(0, 0, 0, 0.2);
+	background-color: #107896;
+	box-shadow: 5px 10px 45px 0 rgba(0, 0, 0, 0.5);
 	border-radius: 20px;
 }
 
@@ -23,6 +23,7 @@ p#heading-text{
 	margin: 20px;
 	font-size: 22px;
 	font-weight: 600;
+	color: white;
 }
 
 input#search{
@@ -37,7 +38,8 @@ input#search{
 }
 
 input#search:focus, input#search:focus::placeholder{
-	color: #303bfb;
+	background-color: white;
+	color: black;
 	outline: none;
 }
 
@@ -67,12 +69,8 @@ div.task{
 	border-radius: 10px;
 }
 
-div.task:hover, div.task:hover input.task-name{
-	background-color: #EAF4FD;
-}
-
-div.task:hover i.task-remove{
-	display: inline-block;
+div.task:hover{
+	background-color: white;
 }
 
 input.task-name{
@@ -80,12 +78,18 @@ input.task-name{
 	font-size: 18px;
 	border: 0;
 	margin-left: 28px;
+	background-color: transparent;
+	color: white;
+}
+
+div.task:hover input.task-name{
+	color: black;
 }
 
 input.task-name:focus{
 	outline: none;
-	border-bottom: 1px solid #303bfb;
-	color: #303bfb;
+	border-bottom: 1px dashed black;
+	color: black;
 }
 
 div.task i{
@@ -105,6 +109,10 @@ i.task-remove{
 	right: 10px;
 	color: #dd1f1f;
 	transition: all 0.3s linear;
+}
+
+div.task:hover i.task-remove{
+	display: inline-block;
 }
 
 div#footer{

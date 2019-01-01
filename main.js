@@ -56,8 +56,12 @@ $(document).ready(function(){
 				star: false
 			};
 			$scope.tasks.unshift(newTask);
+			var stars = 0;
+			for(var i = 0; i < $scope.tasks.length; i++){
+				if($scope.tasks[i].star) stars++;
+			};
 			$timeout(function(){
-				$('div#tasks').find('input.task-name').first().focus();
+				$('div#tasks').find('input.task-name:eq(' + stars + ')').focus();
 			}, 1);
 		}
 	});
